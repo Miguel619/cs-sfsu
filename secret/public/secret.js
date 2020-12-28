@@ -13,12 +13,12 @@ $.ajaxSetup({beforeSend: function(xhr){
               if(input in keyjson)
               {
                   $.getJSON("/secret_json/"+input+".json", function(json) {
-                      $(".news-body").html("<font color=red>Secret news: </font>" + json["news_title"]);
+                      $(".news-body").html("<font color=green>Secret info: </font>" + json["news_title"]);
                   });
               }
               else
               {
-                  $(".news-body").html("Wrong secret key!");
+                  $(".news-body").html("<font color=red>Wrong secret key!</font>");
                   
               }
           });
